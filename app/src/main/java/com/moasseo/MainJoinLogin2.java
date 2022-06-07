@@ -5,6 +5,7 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -12,9 +13,16 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.toolbox.Volley;
+
+import org.json.JSONObject;
+
 public class MainJoinLogin2 extends MainJoinLogin1 {
 
     Button ColorButton1, GrayButton1, JoinNext;
+    Button LoginNextButton;  //본인인증하고 회원가입
     ImageButton BackButton;
     EditText IdEdit, NickNameEdit;
     String aa, bb;
@@ -43,6 +51,14 @@ public class MainJoinLogin2 extends MainJoinLogin1 {
         NickNameEdit = (EditText)findViewById(R.id.Login1PwdEditText);
 
         BackButton = (ImageButton)findViewById(R.id.BackButton);
+
+        LoginNextButton = (Button)findViewById(R.id.LoginNextButton);  //하단 본인인증하고 회원가입 버튼
+
+        //intent로 넘긴 값 받기
+        Intent intent = getIntent();
+        String User_id= intent.getStringExtra("User_id").toString();
+        String User_pwd = intent.getStringExtra("User_pwd").toString();
+        String User_email = intent.getStringExtra("User_email").toString();
 
 
         ColorButton1.setOnClickListener(new View.OnClickListener() {  //칼라버튼
@@ -82,7 +98,7 @@ public class MainJoinLogin2 extends MainJoinLogin1 {
                     flag1 = true;
                 }*/
 
-                if(!(aa.matches(NameValidation))) {
+                /*if(!(aa.matches(NameValidation))) {
                     IdEdit.setBackgroundResource(R.drawable.erroredit);
                     IdEdit.setTextColor(Color.parseColor("#191919"));
                     flag1 = false;
@@ -93,12 +109,15 @@ public class MainJoinLogin2 extends MainJoinLogin1 {
                     IdEdit.setTextColor(Color.parseColor("#191919"));
                     flag1 = true;
                   //  Toast.makeText(getApplicationContext(),aa, Toast.LENGTH_LONG).show(); 확인용
-                }
+                }*/
 
 
                 if(aa.matches("")) {
                     flag1 = false;
                     IdEdit.setBackgroundResource(R.drawable.login1editshape);
+                }
+                else {
+                    flag1 = true;
                 }
 
                 if(flag1 == true && flag2 == true) {
@@ -111,7 +130,7 @@ public class MainJoinLogin2 extends MainJoinLogin1 {
             }
         });
 
-        NickNameEdit.addTextChangedListener(new TextWatcher() {     //유효성 검사 아직 안함
+        NickNameEdit.addTextChangedListener(new TextWatcher() {     //닉네임 EditText, 유효성 검사 아직 안함
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
 
@@ -125,7 +144,7 @@ public class MainJoinLogin2 extends MainJoinLogin1 {
             @Override
             public void afterTextChanged(Editable s) {
                 bb = NickNameEdit.getText().toString();
-                if(!(bb.matches(NickNameValidation))) {
+                /*if(!(bb.matches(NickNameValidation))) {
                     NickNameEdit.setBackgroundResource(R.drawable.erroredit);
                     NickNameEdit.setTextColor(Color.parseColor("#191919"));
                     flag2 = false;
@@ -135,12 +154,15 @@ public class MainJoinLogin2 extends MainJoinLogin1 {
                     NickNameEdit.setBackgroundResource(R.drawable.login1editshape);
                     NickNameEdit.setTextColor(Color.parseColor("#191919"));
                     flag2 = true;
-                }
+                }*/
 
 
                 if(bb.matches("")) {
                     flag2 = false;
                     NickNameEdit.setBackgroundResource(R.drawable.login1editshape);
+                }
+                else {
+                    flag2 = true;
                 }
 
                 if(flag1 == true && flag2 == true) {
@@ -158,6 +180,43 @@ public class MainJoinLogin2 extends MainJoinLogin1 {
             public void onClick(View v) {
                 Intent intent = new Intent(MainJoinLogin2.this, MainJoinLogin1.class);
                 startActivity(intent);
+            }
+        });
+
+        LoginNextButton.setOnClickListener(new View.OnClickListener() {  //하단 본인인증하고 회원가입 버튼
+            @Override
+            public void onClick(View v) {
+
+
+                String User_name = IdEdit.getText().toString();  //이름 입력
+                String User_NickName = NickNameEdit.getText().toString();  //닉네임 입력
+
+                Response.Listener<String> responseListener = new Response.Listener<String>() {
+                    @Override
+                    public void onResponse(String response) {
+                        try {
+                            JSONObject jsonObject = new JSONObject(response.substring(response.indexOf("{"), response.lastIndexOf("}") + 1));
+
+                            //success값을 Php에서 가져오기
+                            boolean success = jsonObject.getBoolean("success");
+                            Log.d("test","success 값 > " + success);
+
+                            if (success) {  //아이디, 비밀번호, 이메일, 이름, 닉네임이 정상으로 DB에 들어가면 success True
+                                Toast.makeText(getApplicationContext(), "insert 성공", Toast.LENGTH_LONG).show();
+                                //MainJoinLogin3, Pass 화면으로 넘김
+                                Intent intent = new Intent(MainJoinLogin2.this, MainJoinLogin3.class);
+                                startActivity(intent);
+                            } else {  //insert 오류시 토스트 메세지..
+                                Toast.makeText(getApplicationContext(), "insert 실패", Toast.LENGTH_LONG).show();
+                            }
+                        } catch (Exception e) {
+                            e.printStackTrace();
+                        }
+                    }
+                };
+                MainJoinLoginRequest mainJoinLoginRequest = new MainJoinLoginRequest(User_id, User_pwd, User_name, User_email, User_NickName, responseListener);
+                RequestQueue queue = Volley.newRequestQueue(MainJoinLogin2.this);
+                queue.add(mainJoinLoginRequest);
             }
         });
 

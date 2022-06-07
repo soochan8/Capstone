@@ -132,9 +132,3 @@
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 
-<!--
-
-    android:text="구글 로그인"
-    android:textColor="#191919"
-    android:textSize="14sp"
-    android:textStyle="normal"-->
