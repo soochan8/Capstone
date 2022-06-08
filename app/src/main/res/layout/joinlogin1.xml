@@ -6,38 +6,48 @@
     android:layout_height="match_parent"
     android:background="@android:color/white">
 
-    <TextView
-        android:id="@+id/LoginText1"
-        android:layout_width="57dp"
-        android:layout_height="23.3dp"
-        android:layout_marginStart="151dp"
-        android:layout_marginTop="37dp"
-        android:letterSpacing="-0.04"
-        android:text="회원가입"
-        android:textColor="#191919"
-        android:textSize="16sp"
-        android:textStyle="bold"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent">
 
-    <ImageButton
-        android:id="@+id/BackButton"
-        android:layout_width="24dp"
-        android:layout_height="24dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="37dp"
-        android:background="@android:color/white"
-        android:scaleType="centerInside"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/back" />
+        <TextView
+            android:id="@+id/LoginText1"
+            android:layout_width="57dp"
+            android:layout_height="23.3dp"
+            android:layout_marginStart="151dp"
+            android:layout_marginTop="13dp"
+            android:letterSpacing="-0.04"
+            android:text="회원가입"
+            android:textColor="#191919"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/BackButton"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="13dp"
+            android:background="@android:color/white"
+            android:scaleType="centerInside"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/back" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <Button
         android:id="@+id/colorbutton"
         android:layout_width="24dp"
         android:layout_height="24dp"
         android:layout_marginStart="284dp"
-        android:layout_marginTop="84dp"
+        android:layout_marginTop="10dp"
         android:background="@drawable/circlebutton"
         android:gravity="center_horizontal|center_vertical"
         android:letterSpacing="0"
@@ -47,14 +57,14 @@
         android:textSize="15sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout2" />
 
     <Button
         android:id="@+id/graybutton"
         android:layout_width="24dp"
         android:layout_height="24dp"
         android:layout_marginStart="316dp"
-        android:layout_marginTop="84dp"
+        android:layout_marginTop="10dp"
         android:background="@drawable/graycirclebutton"
         android:gravity="center_horizontal|center_vertical"
         android:letterSpacing="0"
@@ -64,7 +74,8 @@
         android:textSize="15sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout2" />
+
 
 
     <ScrollView
