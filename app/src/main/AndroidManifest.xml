@@ -33,6 +33,7 @@
         <activity android:name=".MainFindPwdResult"/>
         <activity android:name=".MainFindPwdResult1"/>
         <activity android:name="Main"/>
+        <activity android:name=".MainSetting"/>
     </application>
 
 </manifest>

@@ -6,6 +6,11 @@
         <entry key="..\:/Users/audtn/AndroidStudioProjects/java/moasseo/app/src/main/res/drawable/circlebutton.xml" value="0.16" />
         <entry key="..\:/Users/audtn/AndroidStudioProjects/java/moasseo/app/src/main/res/drawable/erroredit.xml" value="0.16" />
         <entry key="..\:/Users/audtn/AndroidStudioProjects/java/moasseo/app/src/main/res/drawable/login1editshape.xml" value="0.2505" />
+        <entry key="..\:/Users/audtn/AndroidStudioProjects/java/moasseo/app/src/main/res/drawable/naverbutton.xml" value="0.133" />
+        <entry key="..\:/Users/audtn/AndroidStudioProjects/java/moasseo/app/src/main/res/drawable/switch_thumb.xml" value="0.146" />
+        <entry key="..\:/Users/audtn/AndroidStudioProjects/java/moasseo/app/src/main/res/drawable/switch_track_off.xml" value="0.146" />
+        <entry key="..\:/Users/audtn/AndroidStudioProjects/java/moasseo/app/src/main/res/drawable/switch_track_on.xml" value="0.146" />
+        <entry key="..\:/Users/audtn/AndroidStudioProjects/java/moasseo/app/src/main/res/drawable/switch_track_selector.xml" value="0.146" />
         <entry key="..\:/Users/audtn/AndroidStudioProjects/java/moasseo/app/src/main/res/layout/activity_main.xml" value="0.26875" />
         <entry key="..\:/Users/audtn/AndroidStudioProjects/java/moasseo/app/src/main/res/layout/dialog.xml" value="0.2269021739130435" />
         <entry key="..\:/Users/audtn/AndroidStudioProjects/java/moasseo/app/src/main/res/layout/findid.xml" value="0.2595108695652174" />
@@ -18,8 +23,11 @@
         <entry key="..\:/Users/audtn/AndroidStudioProjects/java/moasseo/app/src/main/res/layout/joinlogin2.xml" value="0.25" />
         <entry key="..\:/Users/audtn/AndroidStudioProjects/java/moasseo/app/src/main/res/layout/joinlogin3.xml" value="0.2269021739130435" />
         <entry key="..\:/Users/audtn/AndroidStudioProjects/java/moasseo/app/src/main/res/layout/login.xml" value="0.26875" />
-        <entry key="..\:/Users/audtn/AndroidStudioProjects/java/moasseo/app/src/main/res/layout/main.xml" value="0.2595108695652174" />
+        <entry key="..\:/Users/audtn/AndroidStudioProjects/java/moasseo/app/src/main/res/layout/main.xml" value="0.25" />
         <entry key="..\:/Users/audtn/AndroidStudioProjects/java/moasseo/app/src/main/res/layout/practice.xml" value="0.24818840579710144" />
+        <entry key="..\:/Users/audtn/AndroidStudioProjects/java/moasseo/app/src/main/res/layout/setting.xml" value="0.335" />
+        <entry key="..\:/Users/audtn/AndroidStudioProjects/java/moasseo/app/src/main/res/layout/side_header.xml" value="0.2269021739130435" />
+        <entry key="..\:/Users/audtn/AndroidStudioProjects/java/moasseo/app/src/main/res/menu/side_menu.xml" value="0.25" />
         <entry key="..\:/moasseo/app/src/main/res/layout/activity_main.xml" value="0.358695652173913" />
         <entry key="..\:/moasseo/app/src/main/res/layout/intrologin.xml" value="0.25" />
         <entry key="..\:/moasseo/app/src/main/res/layout/login.xml" value="0.14722222222222223" />
