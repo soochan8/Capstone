@@ -58,18 +58,24 @@ public class Main extends MainLogin {
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 switch(item.getItemId()) {
                     case R.id.information:
-                        Intent intent = new Intent(Main.this, MainSetting.class);
-                        startActivity(intent);
-                        Toast.makeText(Main.this,"정보",Toast.LENGTH_LONG).show();
+                        Intent intent1 = new Intent(Main.this, MainMypage.class);
+                        startActivity(intent1);
+                        //Toast.makeText(Main.this,"정보",Toast.LENGTH_LONG).show();
                         break;
                     case R.id.event:
-                        Toast.makeText(Main.this,"이벤트",Toast.LENGTH_LONG).show();;
+                        Intent intent2 = new Intent(Main.this, MainEvent.class);
+                        startActivity(intent2);
+                        //Toast.makeText(Main.this,"이벤트",Toast.LENGTH_LONG).show();;
                         break;
                     case R.id.map:
-                        Toast.makeText(Main.this,"지도",Toast.LENGTH_LONG).show();;
+                        Intent intent3 = new Intent(Main.this, MainMap.class);
+                        startActivity(intent3);
+                        //Toast.makeText(Main.this,"지도",Toast.LENGTH_LONG).show();;
                         break;
                     case R.id.setting:
-                        Toast.makeText(Main.this,"설정",Toast.LENGTH_LONG).show();;
+                        Intent intent4 = new Intent(Main.this, MainSetting.class);
+                        startActivity(intent4);
+                        //Toast.makeText(Main.this,"설정",Toast.LENGTH_LONG).show();;
                         break;
                 }
                 return false;

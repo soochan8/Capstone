@@ -8,7 +8,7 @@
         <!-- No title Bar -->
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
-        <!-- <item name="android:windowFullscreen">true</item>-->
+        <item name="android:windowFullscreen">true</item>
         <!-- Secondary brand color. -->
         <item name="colorSecondary">@color/teal_200</item>
         <item name="colorSecondaryVariant">@color/teal_700</item>
