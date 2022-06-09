@@ -20,24 +20,24 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="143dp"
-            android:layout_marginTop="13dp"
             android:gravity="center_horizontal"
             android:letterSpacing="-0.04"
             android:text="마이페이지"
             android:textColor="#191919"
             android:textSize="16sp"
             android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <ImageButton
             android:id="@+id/BackButton"
-            android:layout_width="24dp"
-            android:layout_height="24dp"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
             android:layout_marginStart="20dp"
-            android:layout_marginTop="13dp"
             android:background="@android:color/white"
             android:scaleType="centerInside"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/back" />
@@ -57,6 +57,16 @@
         android:gravity="center_horizontal"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/constraintLayout3" />
+
+    <ImageView
+        android:id="@+id/imageView28"
+        android:layout_width="12dp"
+        android:layout_height="12dp"
+        android:layout_marginStart="3dp"
+        android:layout_marginTop="17dp"
+        app:layout_constraintStart_toEndOf="@+id/textView36"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout3"
+        app:srcCompat="@drawable/info1" />
 
     <ImageView
         android:id="@+id/imageView7"
@@ -115,12 +125,12 @@
         android:id="@+id/imageView8"
         android:layout_width="40dp"
         android:layout_height="40dp"
-        android:layout_marginTop="55dp"
-        android:layout_marginEnd="32dp"
+        android:layout_marginTop="59dp"
+        android:layout_marginEnd="25dp"
+        android:scaleType="centerInside"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView36"
-        app:srcCompat="@drawable/bar_grade"
-        android:scaleType="centerInside"/>
+        app:srcCompat="@drawable/bar_grade" />
 
     <TextView
         android:id="@+id/textView39"
@@ -266,8 +276,7 @@
                 android:layout_height="1.7dp"
                 android:background="#ededed"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/constraintLayout5">
-            </View>
+                app:layout_constraintTop_toBottomOf="@+id/constraintLayout5"></View>
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/constraintLayout6"
@@ -308,8 +317,7 @@
                 android:layout_height="1.7dp"
                 android:background="#ededed"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/constraintLayout6">
-            </View>
+                app:layout_constraintTop_toBottomOf="@+id/constraintLayout6"></View>
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/constraintLayout7"
@@ -354,7 +362,7 @@
 
             </View>
 
-             <androidx.constraintlayout.widget.ConstraintLayout
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="74.7dp"
                 app:layout_constraintTop_toBottomOf="@+id/constraintLayout7">
@@ -376,11 +384,11 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="17dp"
                     android:layout_marginTop="24dp"
-                    android:text="환경 설정"
-                    android:textStyle="normal"
-                    android:textSize="16sp"
-                    android:textColor="#191919"
                     android:letterSpacing="-0.04"
+                    android:text="환경 설정"
+                    android:textColor="#191919"
+                    android:textSize="16sp"
+                    android:textStyle="normal"
                     app:layout_constraintStart_toEndOf="@+id/imageView12"
                     app:layout_constraintTop_toTopOf="parent" />
             </androidx.constraintlayout.widget.ConstraintLayout>
@@ -388,6 +396,17 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </ScrollView>
+
+    <View
+        android:id="@+id/view18"
+        android:background="#80000000"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintlayout10"
@@ -444,10 +463,10 @@
 
         <ImageView
             android:id="@+id/imageView15"
-            android:layout_width="100dp"
-            android:layout_height="86.7dp"
-            android:layout_marginStart="40dp"
-            android:layout_marginTop="12dp"
+            android:layout_width="48dp"
+            android:layout_height="62dp"
+            android:layout_marginStart="65dp"
+            android:layout_marginTop="20dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView56"
             app:srcCompat="@drawable/grade" />
@@ -456,8 +475,8 @@
             android:id="@+id/textView57"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="3dp"
-            android:layout_marginTop="31dp"
+            android:layout_marginStart="28dp"
+            android:layout_marginTop="23dp"
             android:letterSpacing="-0.04"
             android:text="모 등급"
             android:textColor="#ff5959"
@@ -470,7 +489,7 @@
             android:id="@+id/textView59"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="3dp"
+            android:layout_marginStart="28dp"
             android:letterSpacing="-0.04"
             android:text="총 사용 포인트 0P ~ 1000P 사용"
             android:textColor="#767676"
@@ -483,7 +502,7 @@
             android:id="@+id/textView60"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="3dp"
+            android:layout_marginStart="28dp"
             android:letterSpacing="-0.04"
             android:text="0.1% 추가 적립"
             android:textColor="#191919"
@@ -507,7 +526,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="22dp"
-            android:layout_marginTop="50dp"
+            android:layout_marginTop="45dp"
             android:letterSpacing="-0.04"
             android:text="모아 등급"
             android:textColor="#ff5959"

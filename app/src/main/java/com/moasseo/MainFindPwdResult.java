@@ -82,7 +82,7 @@ public class MainFindPwdResult extends MainFindPwd {
                             Toast.makeText(getApplicationContext(), "success 값 " + success, Toast.LENGTH_LONG).show();
 
                             if (success) {
-                                Toast.makeText(getApplicationContext(), "비밀번호 변경 성공", Toast.LENGTH_LONG).show();
+                                //Toast.makeText(getApplicationContext(), "비밀번호 변경 성공", Toast.LENGTH_LONG).show();
                                 Intent intent = new Intent(MainFindPwdResult.this,MainFindPwdResult1.class); //비밀번호 확인 창으로 넘김
                                 //intent.putExtra("User_id", User_id);//user_id 전송
                                 startActivity(intent);
@@ -90,7 +90,7 @@ public class MainFindPwdResult extends MainFindPwd {
 
                                 startActivity(intent);*/
                             } else {
-                                Toast.makeText(getApplicationContext(), "비밀번호 변경 실패", Toast.LENGTH_LONG).show();
+                                //Toast.makeText(getApplicationContext(), "비밀번호 변경 실패", Toast.LENGTH_LONG).show();
                             }
                         } catch (Exception e) {
                             e.printStackTrace();

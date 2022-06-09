@@ -155,8 +155,8 @@ public class MainLogin extends MainIntroLogin  {
                            // Log.d("test", "MainLogin 이메일 " + User_email);
 
                             boolean success = jsonObject.getBoolean("success");
-                            /*Log.d("test","asd " + success);
-                            Log.d("test","Id " + User_id);*/
+                            //Log.d("test1","asd " + success);
+                            //Log.d("test","Id " + User_id);
 
                             if (success) {  //로그인 성공시
                                 //Toast.makeText(getApplicationContext(), "로그인 성공", Toast.LENGTH_LONG).show();

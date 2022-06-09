@@ -202,7 +202,6 @@ public class MainJoinLogin2 extends MainJoinLogin1 {
                             Log.d("test","success 값 > " + success);
 
                             if (success) {  //아이디, 비밀번호, 이메일, 이름, 닉네임이 정상으로 DB에 들어가면 success True
-                                Toast.makeText(getApplicationContext(), "insert 성공", Toast.LENGTH_LONG).show();
                                 //MainJoinLogin3, Pass 화면으로 넘김
                                 Intent intent = new Intent(MainJoinLogin2.this, MainJoinLogin3.class);
                                 startActivity(intent);
