@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/information"
+        android:title="내 정보"
+        android:icon="@drawable/icon_mypage_off"/>
+
+    <item
+        android:id="@+id/event"
+        android:title="이벤트"
+        android:icon="@drawable/icon_event_off"/>
+
+    <item
+        android:id="@+id/map"
+        android:title="지도"
+        android:icon="@drawable/icon_location_off"/>
+
+    <item
+        android:id="@+id/setting"
+        android:title="설정"
+        android:icon="@drawable/icon_settings_off"/>
+
+
+</menu>

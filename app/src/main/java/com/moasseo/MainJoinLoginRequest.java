@@ -15,6 +15,7 @@ import java.util.Map;
 
 public class MainJoinLoginRequest extends StringRequest {
     //서버 URL 설정 (PHP 파일 연동)
+    //10.0.2.2 애뮬 로컬 주소
     final static private String URL = "http://10.0.2.2/inphp/MainJoinLogin.php";
     //final static private String URL = "http://172.111.106.2/inphp/MainLogin.php";
     private Map<String, String> map;

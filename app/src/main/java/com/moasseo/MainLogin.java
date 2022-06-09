@@ -151,17 +151,21 @@ public class MainLogin extends MainIntroLogin  {
                             //JSONObject jsonObject = new JSONObject(response);
                             JSONObject jsonObject = new JSONObject(response.substring(response.indexOf("{"), response.lastIndexOf("}") + 1));
 
-                            //String User_email = jsonObject.getString("User_email");  //DB에 있는 User_pw를 받아옴, 확인용
+                            String User_NickName = jsonObject.getString("User_NickName");  //DB에 있는 User_pw를 받아옴, 확인용
                            // Log.d("test", "MainLogin 이메일 " + User_email);
 
                             boolean success = jsonObject.getBoolean("success");
-                            /*Log.d("test","asd " + success);
-                            Log.d("test","Id " + User_id);*/
+                            //Log.d("test1","asd " + success);
+                            //Log.d("test","Id " + User_id);
 
                             if (success) {  //로그인 성공시
                                 //Toast.makeText(getApplicationContext(), "로그인 성공", Toast.LENGTH_LONG).show();
                                 //로그인 성공시 메인화면으로 넘어감
                                 Intent intent = new Intent(MainLogin.this,Main.class);  //메인화면으로 이동
+                                //아이디와 비밀번호 Main으로 넘기기
+                                intent.putExtra("User_id", User_id);
+                                intent.putExtra("User_pwd", User_pwd);
+                                intent.putExtra("User_NickName", User_NickName);
                                 startActivity(intent);
                             } else {
                                 //로그인 실패 시 팝업창
@@ -176,10 +180,7 @@ public class MainLogin extends MainIntroLogin  {
                         }
                     }
                 };
-                Log.d("테스트", "되나영" + User_id);
-                //Log.d("테스트", "되나영" + User_pwd);
                 MainLoginRequest mainLoginRequest = new MainLoginRequest(User_id, User_pwd, responseListener);
-                //MainLoginRequest mainLoginRequest = new MainLoginRequest(User_id, responseListener);
                 RequestQueue queue = Volley.newRequestQueue(MainLogin.this);
                 queue.add(mainLoginRequest);
             }

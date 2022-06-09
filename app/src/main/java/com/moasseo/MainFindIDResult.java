@@ -13,7 +13,7 @@ public class MainFindIDResult extends MainFindID {
 
     TextView textView22;  //찾은 아이디 결과를 보여줄 Text
     TextView FindPwd;  //비밀번호 찾기 Text
-    Button ResultId;  //하단 아이디 찾기 버튼
+    Button Login2;  //하단 로그인 버튼
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -21,7 +21,7 @@ public class MainFindIDResult extends MainFindID {
 
         textView22 = (TextView)findViewById(R.id.textView22);  //찾은 아이디 결과를 보여줄 Text
         FindPwd = (TextView)findViewById(R.id.textView21);  //비밀번호 찾기 Text
-        ResultId = (Button)findViewById(R.id.button12);  //하단 아이디 찾기 버튼
+        Login2 = (Button)findViewById(R.id.button12);  //하단 로그인 버튼
 
         Intent intent = getIntent();
         String User_id = intent.getStringExtra("User_id");
@@ -32,6 +32,14 @@ public class MainFindIDResult extends MainFindID {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainFindIDResult.this, MainFindPwd.class);  //비밀번호 창으로 이동
+                startActivity(intent);
+            }
+        });
+
+        Login2.setOnClickListener(new View.OnClickListener() {  //하단 로그인 하기 버튼 클릭시
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainFindIDResult.this, MainLogin.class);  //비밀번호 창으로 이동
                 startActivity(intent);
             }
         });

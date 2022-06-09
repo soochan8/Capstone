@@ -33,6 +33,12 @@
         <activity android:name=".MainFindPwdResult"/>
         <activity android:name=".MainFindPwdResult1"/>
         <activity android:name="Main"/>
+        <activity android:name=".MainSetting"/>
+        <activity android:name=".MainMypage"/>
+        <activity android:name=".MainEvent"/>
+        <activity android:name=".MainMap"/>
+        <activity android:name=".MainMypagePoint"/>
+        <activity android:name=".MainMypagePoint1"/>
     </application>
 
 </manifest>
