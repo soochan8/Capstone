@@ -46,6 +46,7 @@ public class MainMypage extends MainActivity{
                 //시장별 포인트로 넘어가기
                 Intent intent = new Intent(MainMypage.this, MainMypagePoint.class);  //시장 별 포인트 화면으로 이동
                 startActivity(intent);
+                overridePendingTransition(0, 0);  //화면 넘김 바로
             }
         });
     }

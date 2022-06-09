@@ -82,7 +82,7 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="14dp"
                 android:letterSpacing="-0.04"
-                android:text="로그인 상태 유지"
+                android:text="자동로그인 설정"
                 android:textColor="#191919"
                 android:textSize="14sp"
                 android:textStyle="bold"
