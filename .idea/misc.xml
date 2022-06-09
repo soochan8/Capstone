@@ -9,6 +9,8 @@
         <entry key="..\:/Users/audtn/AndroidStudioProjects/java/moasseo/app/src/main/res/drawable/login1editshape.xml" value="0.2505" />
         <entry key="..\:/Users/audtn/AndroidStudioProjects/java/moasseo/app/src/main/res/drawable/mainimg.xml" value="0.141" />
         <entry key="..\:/Users/audtn/AndroidStudioProjects/java/moasseo/app/src/main/res/drawable/naverbutton.xml" value="0.133" />
+        <entry key="..\:/Users/audtn/AndroidStudioProjects/java/moasseo/app/src/main/res/drawable/point_market_name.xml" value="0.141" />
+        <entry key="..\:/Users/audtn/AndroidStudioProjects/java/moasseo/app/src/main/res/drawable/select_market.xml" value="0.141" />
         <entry key="..\:/Users/audtn/AndroidStudioProjects/java/moasseo/app/src/main/res/drawable/switch_thumb.xml" value="0.146" />
         <entry key="..\:/Users/audtn/AndroidStudioProjects/java/moasseo/app/src/main/res/drawable/switch_track_off.xml" value="0.146" />
         <entry key="..\:/Users/audtn/AndroidStudioProjects/java/moasseo/app/src/main/res/drawable/switch_track_on.xml" value="0.146" />
@@ -29,6 +31,7 @@
         <entry key="..\:/Users/audtn/AndroidStudioProjects/java/moasseo/app/src/main/res/layout/main.xml" value="0.25" />
         <entry key="..\:/Users/audtn/AndroidStudioProjects/java/moasseo/app/src/main/res/layout/map.xml" value="0.30246189917936694" />
         <entry key="..\:/Users/audtn/AndroidStudioProjects/java/moasseo/app/src/main/res/layout/mypage.xml" value="0.375" />
+        <entry key="..\:/Users/audtn/AndroidStudioProjects/java/moasseo/app/src/main/res/layout/mypage_point.xml" value="0.17955801104972377" />
         <entry key="..\:/Users/audtn/AndroidStudioProjects/java/moasseo/app/src/main/res/layout/practice.xml" value="0.24818840579710144" />
         <entry key="..\:/Users/audtn/AndroidStudioProjects/java/moasseo/app/src/main/res/layout/setting.xml" value="0.335" />
         <entry key="..\:/Users/audtn/AndroidStudioProjects/java/moasseo/app/src/main/res/layout/side_header.xml" value="0.2269021739130435" />

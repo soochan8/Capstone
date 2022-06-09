@@ -37,6 +37,7 @@
         <activity android:name=".MainMypage"/>
         <activity android:name=".MainEvent"/>
         <activity android:name=".MainMap"/>
+        <activity android:name=".MainMypagePoint"/>
     </application>
 
 </manifest>
