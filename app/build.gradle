@@ -33,6 +33,10 @@ dependencies {
     //implementation 'com.android.volley:volley-cronet:1.2.1'
     implementation 'com.android.volley:volley:1.2.1'  //DB통해 연동할 때 필요
 
+    //메인화면 민석이가 보내준 거
+    implementation 'androidx.viewpager2:viewpager2:1.0.0'
+    implementation 'me.relex:circleindicator:2.1.6'
+
     //네비게이션, 드로우
     implementation 'com.google.android.material:material:1.2.0-alpha02'
     implementation 'com.makeramen:roundedimageview:2.3.0'

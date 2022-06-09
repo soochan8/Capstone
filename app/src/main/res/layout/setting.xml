@@ -31,8 +31,8 @@
 
         <ImageButton
             android:id="@+id/BackButton"
-            android:layout_width="24dp"
-            android:layout_height="24dp"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
             android:layout_marginStart="20dp"
             android:background="@android:color/white"
             android:scaleType="centerInside"
@@ -112,7 +112,7 @@
                 android:layout_marginTop="21dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                android:track="@drawable/switch_track_selector"
+                android:track="@drawable/switch_track_selector1"
                 android:thumb="@drawable/switch_thumb"/>
 
             <View
@@ -149,6 +149,18 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView28" />
 
+            <Switch
+                android:id="@+id/switch2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="288dp"
+                android:layout_marginTop="21dp"
+                android:switchMinWidth="47.7dp"
+                android:thumb="@drawable/switch_thumb"
+                android:track="@drawable/switch_track_selector"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/view9" />
+
             <View
                 android:id="@+id/view10"
                 android:layout_width="wrap_content"
@@ -183,6 +195,18 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView31" />
 
+            <Switch
+                android:id="@+id/switch3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="288dp"
+                android:layout_marginTop="21dp"
+                android:switchMinWidth="47.7dp"
+                android:thumb="@drawable/switch_thumb"
+                android:track="@drawable/switch_track_selector"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/view10" />
+
             <View
                 android:id="@+id/view11"
                 android:layout_width="wrap_content"
@@ -216,6 +240,18 @@
                 android:textStyle="normal"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView33" />
+
+            <Switch
+                android:id="@+id/switch4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="288dp"
+                android:layout_marginTop="21dp"
+                android:switchMinWidth="47.7dp"
+                android:thumb="@drawable/switch_thumb"
+                android:track="@drawable/switch_track_selector"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/view11" />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>

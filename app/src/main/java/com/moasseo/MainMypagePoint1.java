@@ -31,7 +31,7 @@ public class MainMypagePoint1 extends MainActivity {
             public void onClick(View v) {
                 barcodeLayout.setVisibility(View.VISIBLE);  //바코드 화면 나오기
                 usemoneyLayout.setVisibility(View.GONE);  //사용 내역 가리기
-                Toast.makeText(getApplicationContext(), "바코드 클릭", Toast.LENGTH_LONG).show();
+                //Toast.makeText(getApplicationContext(), "바코드 클릭", Toast.LENGTH_LONG).show();
             }
         });
 
@@ -40,7 +40,7 @@ public class MainMypagePoint1 extends MainActivity {
             public void onClick(View v) {
                 barcodeLayout.setVisibility(View.VISIBLE);  //바코드 화면 나오기
                 usemoneyLayout.setVisibility(View.GONE);  //사용 내역 가리기
-                Toast.makeText(getApplicationContext(), "바코드 클릭", Toast.LENGTH_LONG).show();
+                //Toast.makeText(getApplicationContext(), "바코드 클릭", Toast.LENGTH_LONG).show();
             }
         });
 

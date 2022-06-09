@@ -122,6 +122,20 @@
                 app:layout_constraintTop_toBottomOf="@+id/LoginIdText1" />
 
             <TextView
+                android:id="@+id/NameError"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="8dp"
+                android:text="TextView"
+                android:textStyle="normal"
+                android:textSize="11.3sp"
+                android:letterSpacing="-0.04"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/Login1IdEditText" />
+
+            <TextView
                 android:id="@+id/LoginPwdText2"
                 android:layout_width="50dp"
                 android:layout_height="20.7dp"
@@ -133,7 +147,7 @@
                 android:textSize="14sp"
                 android:textStyle="normal"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/Login1IdEditText" />
+                app:layout_constraintTop_toBottomOf="@+id/NameError" />
 
             <EditText
                 android:id="@+id/Login1PwdEditText"
@@ -151,12 +165,26 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/LoginPwdText2" />
 
+            <TextView
+                android:id="@+id/NickNameError"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="8dp"
+                android:text="TextView"
+                android:textStyle="normal"
+                android:textSize="11.3sp"
+                android:letterSpacing="-0.04"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/Login1PwdEditText" />
+
             <Button
                 android:id="@+id/LoginNextButton"
                 android:layout_width="320dp"
                 android:layout_height="50dp"
                 android:layout_marginStart="20dp"
-                android:layout_marginTop="243dp"
+                android:layout_marginTop="218dp"
                 android:background="@drawable/nextgraybutton"
                 android:gravity="center_horizontal|center_vertical"
                 android:letterSpacing="-0.04"
@@ -165,7 +193,7 @@
                 android:textSize="16sp"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/Login1PwdEditText" />
+                app:layout_constraintTop_toBottomOf="@+id/NickNameError" />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>

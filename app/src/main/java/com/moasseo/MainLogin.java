@@ -162,11 +162,13 @@ public class MainLogin extends MainIntroLogin  {
                                 //Toast.makeText(getApplicationContext(), "로그인 성공", Toast.LENGTH_LONG).show();
                                 //로그인 성공시 메인화면으로 넘어감
                                 Intent intent = new Intent(MainLogin.this,Main.class);  //메인화면으로 이동
-                                //아이디와 비밀번호 Main으로 넘기기
+                                //Intent intent = new Intent(MainLogin.this,MainHome.class);  //메인화면으로 이동
+                                //아이디와 비밀번호, 닉네임 Main으로 넘기기
                                 intent.putExtra("User_id", User_id);
                                 intent.putExtra("User_pwd", User_pwd);
                                 intent.putExtra("User_NickName", User_NickName);
                                 startActivity(intent);
+
                             } else {
                                 //로그인 실패 시 팝업창
                                 AlertDialog.Builder dlg = new AlertDialog.Builder(MainLogin.this);

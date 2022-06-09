@@ -39,7 +39,10 @@ public class MainJoinLogin1 extends MainLogin {
     TextView LoginText;  //하단 로그인 하기 Text
 
     ImageView Eyes;  //비밀번호 입력 보이게 / 안보이게
+    ImageView Eyes1;  //비밀번호 재입력 보이게 / 안보이게
+
     static boolean eyes = true;  //비밀번호 보이게, 안보이게 할 때 사용
+    static boolean eyes1 = true;  //비밀번호 재입력 보이게, 안보이게 할 때 사용
 
     //유효성검사(아이디, 비밀번호, 이메일)
     private String IdValidation = "^[a-zA-Z0-9]{5,11}";  //영문 또는 숫자로 이루어진 5~11자
@@ -82,6 +85,7 @@ public class MainJoinLogin1 extends MainLogin {
         LoginText = (TextView)findViewById(R.id.textView27);  //하단 로그인 Text
 
         Eyes = (ImageView)findViewById(R.id.imageView3);  //비밀번호 보이게 / 안보이게
+        Eyes1 = (ImageView)findViewById(R.id.imageView5);  //비밀번호 재입력 보이게 / 안보이게
 
         //색 변경, 화면넘김 아직!!
         ColorButton1.setOnClickListener(new View.OnClickListener() {  //칼라버튼
@@ -257,6 +261,24 @@ public class MainJoinLogin1 extends MainLogin {
                 }
                 else {
                     LoginNextButton1.setBackgroundResource(R.drawable.nextgraybutton);
+                }
+            }
+        });
+
+        Eyes1.setOnClickListener(new View.OnClickListener() {  //비밀번호 재입력 EditText 눈 표시 클릭
+            @Override
+            public void onClick(View v) {
+                if (eyes1 == true) {
+                    Eyes1.setImageResource(R.drawable.eyes_on);  //클릭 시 비밀번호 보이게 이미지 변경
+                    PwdEdit2.setInputType(InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD);  //비밀번호 보이게
+                    PwdEdit2.setLetterSpacing((float) -0.04);
+                    eyes1 = false;
+
+                } else {
+                    Eyes1.setImageResource(R.drawable.eyes_off);  //켜진 상태에서 클릭시 비밀번호 안보이게 이미지 변경
+                    PwdEdit2.setInputType(InputType.TYPE_CLASS_TEXT| InputType.TYPE_TEXT_VARIATION_PASSWORD);  //비밀번호 안보이게
+                    PwdEdit2.setLetterSpacing((float) -0.04);
+                    eyes1 = true;
                 }
             }
         });
